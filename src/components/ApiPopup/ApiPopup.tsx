@@ -18,7 +18,7 @@ const ApiPopup = () => {
   const [error, setError] = useState<string>('');
 
   const handleConfirm = () => {
-      if ((_apiKey.length === 0) || (_apiKey.length != 51) || (_apiKey.length != 36)) {
+      if ((_apiKey.length === 0) || (_apiKey.length !== 51) || (_apiKey.length !== 36)) {
       setError(t('noApiKeyWarning', { ns: 'api' }) as string);
     } else {
       setError('');
