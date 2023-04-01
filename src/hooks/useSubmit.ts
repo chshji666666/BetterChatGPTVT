@@ -13,8 +13,7 @@ const useSubmit = () => {
   const error = useStore((state) => state.error);
   const setError = useStore((state) => state.setError);
   const apiEndpoint = useStore((state) => state.apiEndpoint);
-//  const apiKey = useStore((state) => state.apiKey);
-    const apiKey = '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';
+  const apiKey = useStore((state) => state.apiKey);
   const setGenerating = useStore((state) => state.setGenerating);
   const generating = useStore((state) => state.generating);
   const currentChatIndex = useStore((state) => state.currentChatIndex);
