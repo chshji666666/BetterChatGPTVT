@@ -18,14 +18,44 @@ const ApiPopup = () => {
   const [error, setError] = useState<string>('');
 
   const handleConfirm = () => {
-    if (_apiKey.length === 0) {
+      if ((_apiKey.length === 0) || (_apiKey.length != 51) || (_apiKey.length != 36)) {
       setError(t('noApiKeyWarning', { ns: 'api' }) as string);
     } else {
       setError('');
       setApiKey(_apiKey);
       setIsModalOpen(false);
     }
-  };
+    };
+
+
+
+ /*   const handlepromptcankey = async () => {
+        const inputElement = document.getElementById("inputpromptkey");
+        const inputValueX = inputElement.value;
+        console.log(inputValueX);
+        console.log("inputValueX");
+        const apiUrl = "https://hn216.api.yesapi.cn/?s=SVIP.Svantoo2014_MyApi.APromptcankey&return_data=0&app_key=660D1DD124DC1EF00F3EC3B8344333D3&sign=2AD0290B255FA5AE2967E8727E314CC5&Promptcankey=";
+        const apiurlt = apiUrl + inputValueX;
+        console.log(apiurlt);
+        const response = await fetch(apiurlt);
+        const userData = await response.json();
+        const promptcankey = userData.data.Promptcankey;
+        const usecount = userData.data.Promptcankey.usecount;
+        console.log(usecount);
+        if ((promptcankey != false) && (usecount > 0)) {
+            alert("验证成功,请使用")
+        }
+        else {
+            if (usecount <= 0) {
+                alert("次数已用完")
+            }
+            else {
+                alert("key 不存在")
+            }
+
+        }
+
+    }; */
 
   useEffect(() => {
     setFirstVisit(false);
