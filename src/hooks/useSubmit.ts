@@ -14,7 +14,7 @@ const useSubmit = () => {
   const setError = useStore((state) => state.setError);
   const apiEndpoint = useStore((state) => state.apiEndpoint);
  //   const apiKey = useStore((state) => state.apiKey);
-    const apiKey = process.env.apiKey;
+    const apiKey = process.env.OpenAIapiKey;
   const setGenerating = useStore((state) => state.setGenerating);
   const generating = useStore((state) => state.generating);
   const currentChatIndex = useStore((state) => state.currentChatIndex);
