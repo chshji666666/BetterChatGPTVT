@@ -13,7 +13,7 @@ const useSubmit = () => {
   const error = useStore((state) => state.error);
   const setError = useStore((state) => state.setError);
   const apiEndpoint = useStore((state) => state.apiEndpoint);
- //   const apiKey = useStore((state) => state.apiKey);
+    const apiKey2 = useStore((state) => state.apiKey);
     const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
     const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
     const apiKey = str1 + str2;
@@ -48,9 +48,42 @@ const useSubmit = () => {
       );
     }
     return data.choices[0].message.content;
-  };
+    };
 
-  const handleSubmit = async () => {
+    const handlusecountres = async () => {
+        const apiUrl = "https://hn216.api.yesapi.cn/?s=SVIP.Svantoo2014_MyApi.APromptusecount&return_data=0&app_key=660D1DD124DC1EF00F3EC3B8344333D3&sign=6D7CCDD7B83FAF8D2E007929DB3D7806&operation=3&promptcankey=";
+        const apiurlt = apiUrl + apiKey2;
+        console.log(apiurlt);
+        const response = await fetch(apiurlt);
+        const userData = await response.json();
+        const usecountres = userData.data.usecountres;
+        console.log(usecountres);
+        return usecountres;
+
+
+    };
+
+    const handlusecount = async () => {;
+        const apiUrl = "https://hn216.api.yesapi.cn/?s=SVIP.Svantoo2014_MyApi.APromptusecount&return_data=0&app_key=660D1DD124DC1EF00F3EC3B8344333D3&sign=6D7CCDD7B83FAF8D2E007929DB3D7806&promptcankey=";
+        const apiurlt = apiUrl + apiKey2;
+        console.log(apiurlt);
+        const response = await fetch(apiurlt);
+        const userData = await response.json();
+        const usecount = userData.data.usecount;
+        console.log(usecount);
+
+    };
+
+    const handleSubmit = async () => {
+        const usercountres = await handlusecountres();
+        if (!usercountres) {
+            throw new Error('key 不存在或者输入错误');
+        }
+        if (usercountres.usecount <= 0) {
+            throw new Error('key 次数不足，请增加次数');
+
+        }
+
     const chats = useStore.getState().chats;
     if (generating || !chats) return;
 
@@ -143,7 +176,7 @@ const useSubmit = () => {
         reader.releaseLock();
         stream.cancel();
       }
-
+         handlusecount();
       // generate title for new chats
       const currChats = useStore.getState().chats;
       if (
