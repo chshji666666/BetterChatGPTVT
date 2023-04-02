@@ -117,7 +117,7 @@ const ApiMenu = ({
             />
           </p>
                   <div>
-                      <button onClick={handlusecountres}>查看剩余使用次数</button>
+                      <button onClick={handlusecountres}>点击查看剩余使用次数</button>
                   </div>
 
           <p>{t('securityMessage', { ns: 'api' })}</p>

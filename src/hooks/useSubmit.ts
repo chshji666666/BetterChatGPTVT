@@ -77,13 +77,13 @@ const useSubmit = () => {
     const handleSubmit = async () => {
         const usercountres = await handlusecountres();
         if (!usercountres) {
-            alert('key 不存在或者输入错误');
-            throw new Error(t('key 不存在或者输入错误') as string);
+            alert('API密钥不存在或者输入错误');
+            throw new Error(t('API密钥不存在或者输入错误') as string);
             
         }
         if (usercountres.usecount <= 0) {
-            alert('key 次数不足，请增加次数');
-            throw new Error('key 次数不足，请增加次数');
+            alert('API密钥次数不足，请增加次数');
+            throw new Error('API密钥次数不足，请增加次数');
         }
 
     const chats = useStore.getState().chats;
