@@ -26,7 +26,8 @@ const ApiMenu = ({
 
   const handleSave = () => {
     setApiKey(_apiKey);
-    setApiEndpoint(_apiEndpoint);
+//    setApiEndpoint(_apiEndpoint);
+      setApiEndpoint('https://chatgpt-api.shn.hk/v1/');
     setIsModalOpen(false);
   };
 
