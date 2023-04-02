@@ -62,7 +62,7 @@ const ApiMenu = ({
               type='text'
               className='text-gray-800 dark:text-white p-3 text-sm border-none bg-gray-200 dark:bg-gray-600 rounded-md m-0 w-full mr-0 h-8 focus:outline-none'
               value={_apiEndpoint}
-              placeholder='https://aichat.promptcan.com/'
+              placeholder=''
               onChange={(e) => {
                 _setApiEndpoint(e.target.value);
               }}

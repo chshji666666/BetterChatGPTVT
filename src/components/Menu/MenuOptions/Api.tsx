@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import PersonIcon from '@icon/PersonIcon';
-//import ApiMenu from '@components/ApiMenu';
-import ApiMenu from '@components/ApiPopup';
+import ApiMenu from '@components/ApiMenu';
 
 const Config = () => {
   const { t } = useTranslation();

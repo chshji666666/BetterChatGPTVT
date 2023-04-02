@@ -3,5 +3,4 @@ export const defaultAPIEndpoint = officialAPIEndpoint;
 
 export const availableEndpoints = [
   officialAPIEndpoint,
-  'https://aichat.promptcan.com/',
 ];
