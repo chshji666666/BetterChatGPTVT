@@ -44,7 +44,7 @@ const SettingsMenu = () => {
               <EnterToSubmitToggle />
             </div>
             <PromptLibraryMenu />
-                      {/*   <ChatConfigMenu /> */}
+             <ChatConfigMenu /> 
           </div>
         </PopupModal>
       )}

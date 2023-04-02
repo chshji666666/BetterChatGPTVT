@@ -46,7 +46,7 @@ const ShareGPT = React.memo(() => {
           setIsModalOpen(true);
         }}
       >
-        {t('postOnShareGPT.title')}
+        {t('发布至promptcan')}
       </button>
       {isModalOpen && (
         <PopupModal
