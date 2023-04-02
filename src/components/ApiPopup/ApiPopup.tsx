@@ -89,7 +89,7 @@ const ApiPopup = () => {
             ns='api'
             components={[
               <a
-                href='https://platform.openai.com/account/api-keys'
+                    href='http://www.promptcan.com/product/view378.html'
                 className='link'
                 target='_blank'
               />,
