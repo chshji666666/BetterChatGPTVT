@@ -530,7 +530,7 @@ const EditViewButtons = React.memo(
             </button>
           )}
         </div>
-       {/* {sticky && <TokenCount />}*/
+            {/* {sticky && <TokenCount />}*/}
         <CommandPrompt _setContent={_setContent} />
       </div>
     );
