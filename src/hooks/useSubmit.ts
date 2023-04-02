@@ -77,7 +77,7 @@ const useSubmit = () => {
     const handleSubmit = async () => {
         const usercountres = await handlusecountres();
         if (!usercountres) {
-            throw new Error('key 不存在或者输入错误');
+            throw new Error(t('key 不存在或者输入错误') as string);
         }
         if (usercountres.usecount <= 0) {
             throw new Error('key 次数不足，请增加次数');
