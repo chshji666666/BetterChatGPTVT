@@ -43,10 +43,11 @@ const ShareGPT = React.memo(() => {
       <button
         className='btn btn-neutral'
         onClick={() => {
-          setIsModalOpen(true);
+            {/*    setIsModalOpen(true);*/ }
+            window.open('http://www.promptcan.com', '_blank');
         }}
       >
-        {t('发布至promptcan')}
+        {t('发布赚收益')}
       </button>
       {isModalOpen && (
         <PopupModal
