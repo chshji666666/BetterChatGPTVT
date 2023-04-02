@@ -34,7 +34,20 @@ const ApiMenu = ({
     if (_customEndpoint) _setApiEndpoint(defaultAPIEndpoint);
     else _setApiEndpoint('');
     _setCustomEndpoint((prev) => !prev);
-  };
+    };
+
+
+    const handlusecountres = async () => {
+        const apiUrl = "https://hn216.api.yesapi.cn/?s=SVIP.Svantoo2014_MyApi.APromptusecount&return_data=0&app_key=660D1DD124DC1EF00F3EC3B8344333D3&sign=6D7CCDD7B83FAF8D2E007929DB3D7806&operation=3&promptcankey=";
+        const apiurlt = apiUrl + _apiKey;
+        console.log(apiurlt);
+        const response = await fetch(apiurlt);
+        const userData = await response.json();
+        const usecountres = userData.data.usecountres.usecount;
+        console.log(usecountres);
+        alert(usecountres);
+        
+    };
 
   return (
     <PopupModal
@@ -103,12 +116,15 @@ const ApiMenu = ({
               ]}
             />
           </p>
+                  <div>
+                      <button onClick={handlusecountres}>查看剩余使用次数</button>
+                  </div>
 
           <p>{t('securityMessage', { ns: 'api' })}</p>
 
-          <p>{t('apiEndpoint.description', { ns: 'api' })}</p>
+                  {/*<p>{t('apiEndpoint.description', { ns: 'api' })}</p>
 
-          <p>{t('apiEndpoint.warn', { ns: 'api' })}</p>
+          <p>{t('apiEndpoint.warn', { ns: 'api' })}</p> */}
         </div>
       </div>
     </PopupModal>
