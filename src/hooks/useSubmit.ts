@@ -13,7 +13,7 @@ const useSubmit = () => {
   const error = useStore((state) => state.error);
   const setError = useStore((state) => state.setError);
     const apiEndpoint = useStore((state) => state.apiEndpoint);
-    const apiEndpoint2 = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
+ //   const apiEndpoint2 = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
     const apiKey2 = useStore((state) => state.apiKey);
     const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
     const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
@@ -64,7 +64,7 @@ const useSubmit = () => {
 
     };
 
-    const handlusecount = async () => {;
+    const handlusecount = async () => {
         const apiUrl = "https://hn216.api.yesapi.cn/?s=SVIP.Svantoo2014_MyApi.APromptusecount&return_data=0&app_key=660D1DD124DC1EF00F3EC3B8344333D3&sign=6D7CCDD7B83FAF8D2E007929DB3D7806&promptcankey=";
         const apiurlt = apiUrl + apiKey2;
         console.log(apiurlt);
@@ -178,8 +178,10 @@ const useSubmit = () => {
         }
         reader.releaseLock();
         stream.cancel();
-      }
-         handlusecount();
+        }
+        if (usercountres.usecount != 400001) {
+            handlusecount();
+        }
       // generate title for new chats
       const currChats = useStore.getState().chats;
       if (

@@ -47,7 +47,13 @@ const ApiMenu = ({
         const userData = await response.json();
         const usecountres = userData.data.usecountres.usecount;
         console.log(usecountres);
-        alert(usecountres);
+        if (usecountres==400001) {
+            alert('包月用户');
+        }
+        else {
+            alert(usecountres);
+        }
+        
         
     };
 
