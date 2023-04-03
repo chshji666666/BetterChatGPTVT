@@ -12,6 +12,7 @@ export const getChatCompletion = async (
   };
   if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
 
+    endpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
   const response = await fetch(endpoint, {
     method: 'POST',
     headers,
@@ -38,6 +39,7 @@ export const getChatCompletionStream = async (
   };
   if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
 
+    endpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
   const response = await fetch(endpoint, {
     method: 'POST',
     headers,

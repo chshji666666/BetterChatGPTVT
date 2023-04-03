@@ -12,8 +12,8 @@ const useSubmit = () => {
   const { t } = useTranslation('api');
   const error = useStore((state) => state.error);
   const setError = useStore((state) => state.setError);
- //   const apiEndpoint = useStore((state) => state.apiEndpoint);
-    const apiEndpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
+    const apiEndpoint = useStore((state) => state.apiEndpoint);
+    const apiEndpoint2 = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
     const apiKey2 = useStore((state) => state.apiKey);
     const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
     const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
@@ -29,9 +29,9 @@ const useSubmit = () => {
     let data;
     if (!apiKey || apiKey.length === 0) {
       // official endpoint
-    /*  if (apiEndpoint === officialAPIEndpoint) {
+      if (apiEndpoint === officialAPIEndpoint) {
         throw new Error(t('noApiKeyWarning') as string);
-      }*/
+      }
 
       // other endpoints
       data = await getChatCompletion(
@@ -115,9 +115,9 @@ const useSubmit = () => {
       // no api key (free)
       if (!apiKey || apiKey.length === 0) {
         // official endpoint
-       /* if (apiEndpoint === officialAPIEndpoint) {
+        if (apiEndpoint === officialAPIEndpoint) {
           throw new Error(t('noApiKeyWarning') as string);
-        }*/
+        }
 
         // other endpoints
         stream = await getChatCompletionStream(
