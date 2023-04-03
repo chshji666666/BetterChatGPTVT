@@ -36,15 +36,19 @@ const ShareGPT = React.memo(() => {
         console.log(e);
       }
     }
-  };
+    };
+
+    const handleClick = () => {
+        setIsModalOpen(false);
+        window.open('http://www.promptcan.com', '_blank');
+    };
 
   return (
     <>
       <button
         className='btn btn-neutral'
         onClick={() => {
-            {/*    setIsModalOpen(true);*/ }
-            window.open('http://www.promptcan.com', '_blank');
+               setIsModalOpen(true);
         }}
       >
         {t('发布赚收益')}
@@ -52,9 +56,9 @@ const ShareGPT = React.memo(() => {
       {isModalOpen && (
         <PopupModal
           setIsModalOpen={setIsModalOpen}
-          title={t('postOnShareGPT.title') as string}
-          message={t('postOnShareGPT.warning') as string}
-          handleConfirm={handleConfirm}
+          title={t('发布至PromptCan') as string}
+          message={t('发布你的有创意的文本提示词赚取收益') as string}
+          handleConfirm={handleClick}
         />
       )}
     </>
