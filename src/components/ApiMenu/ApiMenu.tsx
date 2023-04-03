@@ -121,6 +121,14 @@ const ApiMenu = ({
                   <div>
                       <button onClick={handlusecountres}>点击查看剩余使用次数</button>
                   </div>
+                  <div>
+                  <a href='http://www.promptcan.com' target='_blank'>
+                      <img
+                          src='./qrcode.jpg'
+                          alt='chatgpt公众号使用入口'
+                      />
+                      </a>
+                  </div>
 
           <p>{t('securityMessage', { ns: 'api' })}</p>
 
