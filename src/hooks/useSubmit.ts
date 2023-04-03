@@ -12,8 +12,8 @@ const useSubmit = () => {
   const { t } = useTranslation('api');
   const error = useStore((state) => state.error);
   const setError = useStore((state) => state.setError);
-    const apiEndpoint = useStore((state) => state.apiEndpoint);
-  //  const apiEndpoint = 'https://chatgptapi-xqtyc4y2gq-as.a.run.app/v1/';
+ //   const apiEndpoint = useStore((state) => state.apiEndpoint);
+    const apiEndpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
     const apiKey2 = useStore((state) => state.apiKey);
     const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
     const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
