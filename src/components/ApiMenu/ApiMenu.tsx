@@ -28,7 +28,7 @@ const ApiMenu = ({
     setApiKey(_apiKey);
  //   setApiEndpoint(_apiEndpoint);
  //     setApiEndpoint('https://chatgpt-api.shn.hk/v1/');
-      setApiEndpoint('https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/');
+ //     setApiEndpoint('https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/');
     setIsModalOpen(false);
   };
 
