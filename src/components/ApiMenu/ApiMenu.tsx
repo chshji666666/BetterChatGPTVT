@@ -123,7 +123,7 @@ const ApiMenu = ({
                   </div>
 
                   <div>  
-                      <p>{t('chatgpt公众号使用入口')</p>
+                      <p>{t('chatgpt公众号使用入口')}</p>
                   <a href='http://www.promptcan.com' target='_blank'>
                       <img
                               src='./qrcode.jpg' style={{ width: "100px", height: "100px" }}
