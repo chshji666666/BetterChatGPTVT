@@ -5,8 +5,8 @@ import useStore from '@store/store';
 import { ChatInterface } from '@type/chat';
 
 import TickIcon from '@icon/TickIcon';
-const ShareGPT = React.memo(() => {
-
+const ChatHelp = React.memo(() => {
+    const { t } = useTranslation();
     return (
         <>
             <button
