@@ -78,8 +78,8 @@ const useSubmit = () => {
     const handleSubmit = async () => {
         const usercountres = await handlusecountres();
         if (!usercountres) {
-            alert('API密钥不存在或者输入错误');
-            throw new Error(t('API密钥不存在或者输入错误') as string);
+            alert('API密钥不存在或者输入错误,请查看使用帮助');
+            throw new Error(t('API密钥不存在或者输入错误,请查看使用帮助') as string);
             
         }
         if (usercountres.usecount <= 0) {
