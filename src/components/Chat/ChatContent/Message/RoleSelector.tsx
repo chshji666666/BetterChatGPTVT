@@ -30,7 +30,7 @@ const RoleSelector = React.memo(
           onClick={() => setDropDown((prev) => !prev)}
         >
           {t(role)}
-          <DownChevronArrow //>
+          <DownChevronArrow />
         </button>
         <div
           id='dropdown'
