@@ -15,8 +15,10 @@ const useSubmit = () => {
     const apiEndpoint = useStore((state) => state.apiEndpoint);
  //   const apiEndpoint2 = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
     const apiKey2 = useStore((state) => state.apiKey);
-    const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
-    const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
+//    const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
+//    const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
+    const str1 = 'sk-dh2i4iHls6DgWPfKGhg8T3BlbkF';
+    const str2 = 'JWnl0M0Q20UNAu3po3adG';
     const apiKey = str1 + str2;
   const setGenerating = useStore((state) => state.setGenerating);
   const generating = useStore((state) => state.generating);
