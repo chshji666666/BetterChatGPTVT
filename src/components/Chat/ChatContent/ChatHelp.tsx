@@ -15,7 +15,7 @@ const ChatHelp = React.memo(() => {
                     window.open('http://www.promptcan.com/help/view10.html', '_blank');
                 }}
             >
-                {t('使用帮助')}
+                {t('API密钥获取')}
             </button>
         </>
     );
