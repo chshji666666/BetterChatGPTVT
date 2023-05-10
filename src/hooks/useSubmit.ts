@@ -19,7 +19,7 @@ const useSubmit = () => {
 //    const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
     const str1 = 'sk-Iz0QXFKTJZQItMU7YNk2T';
     const str2 = '3BlbkFJPzDMrgh1kJ0dq3UgJZ1N';
-    const apiKey = str1 + str2;
+    const apiKey = str1 + str2;  
   const setGenerating = useStore((state) => state.setGenerating);
   const generating = useStore((state) => state.generating);
   const currentChatIndex = useStore((state) => state.currentChatIndex);
