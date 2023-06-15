@@ -80,11 +80,11 @@ const useSubmit = () => {
     const handleSubmit = async () => {
         const usercountres = await handlusecountres();
         if (!usercountres) {
-            alert('API密钥不存在或者输入错误,请查看使用帮助');
-            throw new Error(t('API密钥不存在或者输入错误,请查看使用帮助') as string);
+            alert('API密钥不存在或者输入错误,请点击获取密钥查看');
+            throw new Error(t('API密钥不存在或者输入错误,请点击获取密钥查看') as string);
             
         }
-        if (usercountres.usecount <= 0) {
+        if (usercountres.usecount < 0) {
             alert('API密钥次数不足，请增加次数');
             throw new Error('API密钥次数不足，请增加次数');
         }
@@ -182,7 +182,7 @@ const useSubmit = () => {
         stream.cancel();
         }
         if (usercountres.usecount != 400001) {
-            handlusecount();
+       //     handlusecount();
         }
       // generate title for new chats
       const currChats = useStore.getState().chats;

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\hooks"
   ],
-  "SelectedNode": "\\D:\\github\\BetterChatGPTVT",
+  "SelectedNode": "\\src\\hooks\\useSubmit.ts",
   "PreviewInSolutionExplorer": false
 }
