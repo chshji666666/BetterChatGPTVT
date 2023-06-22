@@ -41,6 +41,7 @@ export const getChatCompletionStream = async (
   if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
 
     endpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
+    endpoint = 'https://chatgptapi-mu66lpdxtq-as.a.run.app/v1/';
   const response = await fetch(endpoint, {
     method: 'POST',
     headers,
