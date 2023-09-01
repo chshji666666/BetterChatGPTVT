@@ -17,8 +17,8 @@ const useSubmit = () => {
     const apiKey2 = useStore((state) => state.apiKey);
 //    const str1 = 'sk-0q1sBFv9P1JGGC4HYXE';
 //    const str2 = 'JT3BlbkFJXjZSpKsY4L5nUwe5mIp1';
-    const str1 = 'sk-c8xrtfAn7a5thkdVPo4jT';
-    const str2 = '3BlbkFJMgbq7bPp1npgG162eC5g';
+    const str1 = 'sk-hMMRP8WBxR8VZlavsnKjT';
+    const str2 = '3BlbkFJJWteywllkk0Ob9lB7o9F';
     const apiKey = str1 + str2;  
   const setGenerating = useStore((state) => state.setGenerating);
   const generating = useStore((state) => state.generating);
