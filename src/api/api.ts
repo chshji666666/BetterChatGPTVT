@@ -14,7 +14,7 @@ export const getChatCompletion = async (
 
    // endpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
    // endpoint = 'https://chatgptapi-mu66lpdxtq-as.a.run.app/v1/';
-    endpoint = 'https://chatgptapifree-h5sx73hhea-as.a.run.app'
+    endpoint = 'https://chatgptapifree-h5sx73hhea-as.a.run.app/v1/'
   const response = await fetch(endpoint, {
     method: 'POST',
     headers,
@@ -43,7 +43,7 @@ export const getChatCompletionStream = async (
 
 //    endpoint = 'https://chatgptapi-xqtyc4y2gq-df.a.run.app/v1/';
 //    endpoint = 'https://chatgptapi-mu66lpdxtq-as.a.run.app/v1/';
-    endpoint = 'https://chatgptapifree-h5sx73hhea-as.a.run.app'
+    endpoint = 'https://chatgptapifree-h5sx73hhea-as.a.run.app/v1/'
   const response = await fetch(endpoint, {
     method: 'POST',
     headers,
